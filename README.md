@@ -38,6 +38,7 @@
 - 다음 에러는 숫자버튼 누르지 않고 바로 연산기호를 누르고 = 버튼을 클릭했을시 나타나는 에러이다.
 - 무엇때문인지 원인을 계속 알수가 없었는데 연산값이 없는데 다음 코드에서 원인이 생겼다는걸 발견하였다.
 ![연산기호 에러](https://user-images.githubusercontent.com/92193144/161264903-ff2fffe1-5f12-4086-99d1-daf023d25ca0.png)
+### 코드 수정 전 ###
 <pre>
 	public double Calculate(String inputText) {
 		
@@ -87,7 +88,7 @@
 
 	}
 </pre>
-
+### 코드 수정 후 ###
 <pre>
 
 
