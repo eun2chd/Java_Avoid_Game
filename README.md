@@ -26,5 +26,6 @@
 - 화면 중간 중간 체력을 채워주는 아이템 추가
 - 게임 프레임을 종료시키게되면 램에서 프로그램이 내려가기 때문에 점수가 저장되지 않는다. DB랑 연동하여 SCORE 를 저장하는 기능을 추가
 ##
+##
 
-
+![ezgif com-gif-maker](https://user-images.githubusercontent.com/92193144/161262493-e0fb831e-205f-4bcd-b35b-918cd6f13de9.gif)
