@@ -112,7 +112,7 @@
 			}else if(s.contentEquals("÷")) {
 				mod = "div";
 			}else {
-				if(!s.isEmpty()) { // 조건식을 추가해서 에러 
+				if(!s.isEmpty()) { // 조건식을 추가해서 에러해결
 					 current = Double.parseDouble(s);
 				}
 	
