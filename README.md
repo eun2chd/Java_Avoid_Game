@@ -38,8 +38,106 @@
 - 무엇때문인지 원인을 계속 알수가 없었는데 연산값이 없는데 다음 코드에서 원인이 생겼다는걸 발견하였다.
 ![연산기호 에러](https://user-images.githubusercontent.com/92193144/161264903-ff2fffe1-5f12-4086-99d1-daf023d25ca0.png)
 <pre>
+	public double Calculate(String inputText) {
+		
+		SymbolConver(inputText);
+		// 사용자가 입력한 숫자 및 연산자들을 가져옴 (문자열)
+		
+		double pre = 0.0;
+		double current = 0;
+		String mod = "";
+		String error = "0";
+		
+		for (String s : Num_Str) {
+			if(s.contentEquals("+")) {
+				mod = "add";
+			}else if(s.contentEquals("-")) {
+				mod = "sub";
+			}else if(s.contentEquals("×")) {
+				mod = "mul";
+			}else if(s.contentEquals("÷")) {
+				mod = "div";
+			}else {
+					 current = Double.parseDouble(s); // +,- 기호를 누르고 = 버튼을 클릭하게 되면 current 안에 값이 없기때문에 위 에러가 
+				 if(mod == "add") {
+						System.out.println(pre);
+						System.out.println(current);
+						pre += current;
+						System.out.println(pre);
+					}else if(mod == "sub") {
+						pre -= current;
+					}else if(mod == "mul") {
+						pre *= current;
+					}else if(mod == "div") {
+							pre /= current;	
+					}else {
+						pre = current;
+					}
+					
+			}
+		
+			
+		}		
+		
 
-sdadas
+			return pre;	
+		
+
+	}
+
+--
+  
+  	public double Calculate(String inputText) {
+		
+		SymbolConver(inputText);
+		// 사용자가 입력한 숫자 및 연산자들을 가져옴 (문자열)
+		
+		double pre = 0.0;
+		double current = 0;
+		String mod = "";
+		String error = "0";
+		
+		for (String s : Num_Str) {
+			if(s.contentEquals("+")) {
+				mod = "add";
+			}else if(s.contentEquals("-")) {
+				mod = "sub";
+			}else if(s.contentEquals("×")) {
+				mod = "mul";
+			}else if(s.contentEquals("÷")) {
+				mod = "div";
+			}else {
+				if(!s.isEmpty()) { // 조건식을 추가해서 에러 
+					 current = Double.parseDouble(s);
+				}
+	
+				 if(mod == "add") {
+						System.out.println(pre);
+						System.out.println(current);
+						pre += current;
+						System.out.println(pre);
+					}else if(mod == "sub") {
+						pre -= current;
+					}else if(mod == "mul") {
+						pre *= current;
+					}else if(mod == "div") {
+							pre /= current;	
+					}else {
+						pre = current;
+					}
+					
+			}
+		
+			
+		}		
+		
+
+			return pre;	
+		
+
+	}
+	
+
 
 </pre>
 
