@@ -86,9 +86,11 @@
 		
 
 	}
+</pre>
 
---
-  
+<pre>
+
+
   	public double Calculate(String inputText) {
 		
 		SymbolConver(inputText);
@@ -139,9 +141,9 @@
 
 	}
 	
-
-
 </pre>
+  
+
 
 # 개선해야될 사항 #
 - 아무값이 없는 상태에서 <- 클릭하게 되면 에러발생 어떻게 처리해야 에러가 발생하지 않을지 좀더 알아봐야할거같다. 해결못함.
